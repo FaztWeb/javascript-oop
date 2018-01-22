@@ -5,3 +5,5 @@
 - object-properties
 - object-methods
 - object-constructor
+- object-prototypes
+- object-class
