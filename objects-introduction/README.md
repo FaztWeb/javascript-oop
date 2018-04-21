@@ -1,0 +1,5 @@
+- literals
+- properties
+- methods
+- constructor
+- prototypes
