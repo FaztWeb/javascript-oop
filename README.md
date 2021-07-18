@@ -3,4 +3,5 @@
 
 # Index
 - objects introduction
+- oop principles
 

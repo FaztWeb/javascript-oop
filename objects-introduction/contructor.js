@@ -1,39 +1,39 @@
 // OBJECTS IN LITERAL NOTATION ARE NOT REUSABLE, WE HAVE TO REPEAT OBJECTS
-var johnSmith = {
+const johnSmith = {
   name: "John",
   surname: "Smith",
   address: {
     street: "13 Duncannon Street",
     city: "London",
-    country: "United Kingdom"
+    country: "United Kingdom",
   },
-  displayFullName: function() {
+  displayFullName: function () {
     return this.name + " " + this.surname;
-  }
+  },
 };
 
-var marioRossi = {
+const marioRossi = {
   name: "Mario",
   surname: "Rossi",
   address: {
     street: "Piazza Colonna 370",
     city: "Roma",
-    country: "Italy"
+    country: "Italy",
   },
-  displayFullName: function() {
+  displayFullName: function () {
     return this.name + " " + this.surname;
-  }
+  },
 };
 
-// WE CAN CREATE OBJECTS WITH A constructor
+// We can create objects with a constructor
 function Person() {
   this.name = "";
   this.surname = "";
   this.address = "";
   this.email = "";
-  this.displayFullName = function() {
+  this.displayFullName = function () {
     return this.name + " " + this.surname;
-  }
+  };
 }
 
 // TO CREATE AN OBJECT WITH A CONSTRUCTOR WE HAVE TO USE new KEYWORD
@@ -49,14 +49,14 @@ johnCarter.displayFullName();
 
 // AND WE CAN INITIALIZE PARAMETERS
 function PersonWithInitialization(name, surname) {
-    this.name = name;
-    this.surname = surname;
-    this.address = "";
-    this.email = "";
-    this.displayFullName = function () {
-      return this.name + " " + this.surname;
-    };
-};
+  this.name = name;
+  this.surname = surname;
+  this.address = "";
+  this.email = "";
+  this.displayFullName = function () {
+    return this.name + " " + this.surname;
+  };
+}
 let jamesWilson = new PersonWithInitialization("James", "Wilson");
 let gregoryHouse = new PersonWithInitialization("Gregory", "House");
 
@@ -81,8 +81,8 @@ console.log(person.constructor == Object); // true
 
 // object contructor can generate object from any javascript expression
 let number = new Object(12);
-let anotherNumber = new Object(3*2);
+let anotherNumber = new Object(3 * 2);
 let string = new Object("test");
-let person = new Object({name: "John", surname: "Smith"});
+let person = new Object({ name: "John", surname: "Smith" });
 
 console.log(number);

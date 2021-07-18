@@ -4,27 +4,27 @@ function Person(name, surname) {
   this.surname = surname;
 }
 
-let johnSmith = new Person('John', 'Smith');
-let marioRossi = new Person('Mario', 'Rossi');
+const johnSmith = new Person("John", "Smith");
+const marioRossi = new Person("Mario", "Rossi");
 
 johnSmith.greets = function () {
-  console.log(`Hello ${this.name} ${this.surname}!`);
-}
+  return `Hello ${this.name} ${this.surname}!`;
+};
 
 // But, to change the structure of all Objects
 // created by a construtor
 
 Person.prototype.greets = function () {
-  console.log(`Hello ${this.name} ${this.surname}!`);
-}
+  return `Hello I'am ${this.name} ${this.surname}!`;
+};
+
 // the prototype is a reference to another Object
 // if a object dont have a method, it will find in the construtor
 // and if not, it will find in the basic Object methods
 
 // We can extend built-in object functionality
-String.prototype.padLeft = function (width, char) {
+String.prototype.padLeft = function (width, char = " ") {
   let result = this;
-  char = char || " ";
 
   if (this.length < width) {
     result = new Array(width - this.length + 1).join(char) + this;
@@ -32,4 +32,8 @@ String.prototype.padLeft = function (width, char) {
 
   return result;
 };
-console.log("abc".padLeft(10, "x"));
+
+"Hello".padLeft(10, "x");
+
+// but in javasrcipt you can use padstart and padEnd
+"hello".padEnd(12, "x"); //?

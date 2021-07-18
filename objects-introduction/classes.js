@@ -12,20 +12,20 @@ class myClass {
 
   method1() {}
   method2() {}
-
 }
 
 // but is possible to override the default construtor behavior
-class myClassTwo {
-  constructor(value) {
+class MyClassTwo {
+  constructor(value1, value2) {
     return {
-      property1: value,
-      property2: ""
+      property1: value1,
+      property2: value2,
+      location: "London",
     };
   }
 }
 
-let x = new myClassTwo("foo");
+let myClassTwo = new MyClassTwo("foo", "bar");
 
 // example
 class Person {
@@ -36,6 +36,7 @@ class Person {
 }
 
 const ryanRay = new Person("Ryan", "Ray");
+
 // we cannot invoke with a class like a function
 // const person = Person('personName', 'personSurname'); // error
 
@@ -47,23 +48,22 @@ function PersonOldDefinition() {
 }
 
 // to check that is just syntactic sugar
-console.log(typeof Person); // function
+typeof Person; // function
 
 let PersonTwo = class {
   constructor(name, surname) {
     this.name = name;
     this.surname = surname;
   }
-}
+};
 
-let johnCarter = new PersonTwo('John', 'Carter');
+let johnCarter = new PersonTwo("John", "Carter");
 
 // unlike function class are not "hoisted"
 // it means, that we cannot use before its declaration
-let car = new Car();
+
+// const car = new Car(); // error
 
 class Car {
-  constructor() {
-
-  }
+  constructor() {}
 }

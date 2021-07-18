@@ -1,24 +1,25 @@
-// the double quotes are optional
-let personTwo = {
+// the double quotes are optional in keys
+const personTwo = {
   name: "John",
-  surname: "Smith"
+  surname: "Smith",
 };
 
 // but in this situation, you have to use double quotes
 let personThree = {
   "first-name": "John",
-  "second-name": "Carter"
+  "second-name": "Carter",
 };
 
 // nested object, you can assign an object to another object
 let personFour = {
   name: "John",
   surname: "Carter",
-  address: { // a nested object
+  address: {
+    // a nested object
     street: "13 duncannon Street",
     city: "London",
-    country: "United Kingdom"
-  }
+    country: "United Kingdom",
+  },
 };
 
 // to access to values stored in properties you can use
@@ -42,11 +43,9 @@ personFive.surname = "Carter";
 personFive.address = {
   street: "123 dunncannon street",
   city: "London",
-  country: "United Kingdom"
+  country: "United Kingdom",
 };
 personFive.age = 28;
 
-
 // besides being able to create properties dinamically, we can destroy it
 delete personFive.age;
-
