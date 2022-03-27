@@ -14,6 +14,8 @@ class myClass {
   method2() {}
 }
 
+myClass.prototype //?
+
 // but is possible to override the default construtor behavior
 class MyClassTwo {
   constructor(value1, value2) {
