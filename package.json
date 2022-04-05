@@ -1,0 +1,21 @@
+{
+  "name": "javascript-oop-1",
+  "version": "1.0.0",
+  "description": "- Basic Knowledge of Javascript Syntax",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FaztWeb/javascript-oop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FaztWeb/javascript-oop/issues"
+  },
+  "homepage": "https://github.com/FaztWeb/javascript-oop#readme"
+}

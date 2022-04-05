@@ -3,31 +3,31 @@ function showFullName() {
   return "John Smith";
 }
 
-const personSix = {};
-personSix.fullName = showFullName;
+const john = {};
+john.showFullName = showFullName;
 
 // we can assign a method inside its literal representation
 
-const personSeven = {
-  name: "John",
+const joe = {
+  name: "Joe",
   surname: "Carter",
   showFullName: function () {
-    return "John Carter";
+    return "Joe Carter";
   },
 };
 
-// and in ECMASCRIPT 2015, we can assign a method in more direct form
-const personEight = {
-  name: "John",
-  surname: "Carter",
+// and in ECMASCRIPT 2015, we can assign a method this way as well
+const ryan = {
+  name: "Ryan",
+  surname: "Ray",
   showFullName() {
-    return "John Carter";
+    return "Ryan Ray";
   },
 };
 
 // the last method always display the same name, to avoid it, we can use this keyword
-personEight.showFullName = function () {
+ryan.name = "Braian"
+ryan.showFullName = function () {
   return this.name + " " + this.surname;
 };
 
-console.log(personEight.showFullName());
